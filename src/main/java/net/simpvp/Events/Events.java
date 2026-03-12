@@ -24,6 +24,7 @@ public class Events extends JavaPlugin implements Listener {
 		getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
 		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
 		getServer().getPluginManager().registerEvents(new PluginDisable(), this);
+		getServer().getPluginManager().registerEvents(new JoinListener(this), this);
 		getCommand("ea").setExecutor(new EaCommand());
 		getCommand("event").setExecutor(new EventCommand());
 		getCommand("eventlist").setExecutor(new EventListCommand());
